@@ -10,17 +10,17 @@ with open("README.rst") as file:
 
 
 setup(
-    name="atlassian-python-api",
+    name="atlassian",
     description="Python Atlassian REST API Wrapper",
     long_description=long_description,
     license="Apache License 2.0",
     version=version,
-    download_url="https://github.com/atlassian-api/atlassian-python-api",
+    download_url="https://github.com/Luca122131/atlassian-python-api",
     author="Matt Harasymczuk",
     author_email="matt@astrotech.io",
     maintainer="Gonchik Tsymzhitov",
     maintainer_email="gonchik.tsymzhitov@gmail.com",
-    url="https://github.com/atlassian-api/atlassian-python-api",
+    url="https://github.com/Luca122131/atlassian-python-api",
     keywords="atlassian jira core software confluence bitbucket bamboo crowd portfolio tempo servicedesk assets api",
     packages=find_packages(include=["atlassian*"]),
     package_dir={"atlassian": "atlassian"},

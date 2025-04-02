@@ -2760,23 +2760,32 @@ class Jira(AtlassianRestAPI):
 
     def add_version(
         self,
-        project_key: str,
-        project_id: T_id,
-        version: str,
-        is_archived: bool = False,
-        is_released: bool = False,
+        project_key,
+        project_id,
+        version_name,
+        version_description,
+        start_date,
+        release_date,
+        is_archived=False,
+        is_released=False,
     ):
         """
         Add missing version to project
         :param project_key: the project key
         :param project_id: the project id
-        :param version: the new project version to add
+        :param version_name: the new project version name to add
+        :param version_description: the new project version description to add
+        :param start_date: the new project version start date
+        :param release_date: the new project version release date
         :param is_archived:
         :param is_released:
         :return:
         """
         payload = {
-            "name": version,
+            "name": version_name,
+            "description": version_description,
+            "startDate": start_date,
+            "releaseDate": release_date,
             "archived": is_archived,
             "released": is_released,
             "project": project_key,
